@@ -4,12 +4,13 @@ import model.entity.Car;
 import model.repository.CarDAO;
 import model.repository.CarDAORead;
 import model.repository.CarDAOWrite;
+import model.repository.CarDBDAO;
 
 import java.util.List;
 
 public class CarService implements CarServiceRead, CarServiceWrite {
-    CarDAORead carDAORead = new CarDAO();
-    CarDAOWrite carDAOWrite = new CarDAO();
+    CarDAORead carDAORead = new CarDBDAO();
+    CarDAOWrite carDAOWrite = new CarDBDAO();
 
     @Override
     public void save(Car car) {
