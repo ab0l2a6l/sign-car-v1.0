@@ -5,22 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5b2f10cf-2ff3-4dc4-95f1-323106402558" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/signup-car-v1.0.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/common/StaticScanner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controler/CarControler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/entity/Car.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/repository/CarDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/repository/CarDAORead.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/repository/CarDAOWrite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/service/CarService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/service/CarServiceRead.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/service/CarServiceWrite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/repository/CarDBDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/repository/CarDBDAO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,10 +41,14 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -70,6 +61,7 @@
       <option name="presentableId" value="Default" />
       <updated>1685785919503</updated>
       <workItem from="1685785924318" duration="3771000" />
+      <workItem from="1685793840639" duration="6234000" />
     </task>
     <servers />
   </component>
@@ -86,5 +78,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/view/Main.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

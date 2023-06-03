@@ -15,14 +15,19 @@ public class CarDBDAO implements CarDAOWrite, CarDAORead {
     private Connection connection;
     private Statement statement;
 
-
-    @Override
-    public void save(Car car) {
+    public CarDBDAO() {
         try {
             connection = DriverManager.getConnection(url, username, password);
             System.out.println(connection + " connected");
             statement = connection.createStatement();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
+    @Override
+    public void save(Car car) {
+        try {
             query = "insert into Car values (" + car.getId() + "," + car.getModel() + ")";
             statement.executeUpdate(query);
 
@@ -37,10 +42,6 @@ public class CarDBDAO implements CarDAOWrite, CarDAORead {
     @Override
     public void delete(long id) {
         try {
-            connection = DriverManager.getConnection(url, username, password);
-            System.out.println(connection + " connected");
-            statement = connection.createStatement();
-
             query = "delete from car where id = " + id;
             statement.executeUpdate(query);
 
@@ -55,8 +56,6 @@ public class CarDBDAO implements CarDAOWrite, CarDAORead {
     @Override
     public void update(Car car) {
         try {
-
-
             connection = DriverManager.getConnection(url, username, password);
             System.out.println(connection + " connected");
             statement = connection.createStatement();
@@ -81,21 +80,13 @@ public class CarDBDAO implements CarDAOWrite, CarDAORead {
     public Car findById(long id) {
         Car car = new Car();
         try {
-
-            connection = DriverManager.getConnection(url, username, password);
-            System.out.println(connection + " connected");
-
-            statement = connection.createStatement();
-
             query = "select * from car ";
             ResultSet resultSet = statement.executeQuery(query);
 
             while (resultSet.next()) {
                 if (id == resultSet.getInt("id")) {
-                    long tempId = resultSet.getInt("id");
-                    String model = resultSet.getString("model");
-                    car.setId(tempId);
-                    car.setModel(model);
+                    car.setId(resultSet.getInt("id"));
+                    car.setModel(resultSet.getString("model"));
                 }
             }
             statement.close();
@@ -112,12 +103,6 @@ public class CarDBDAO implements CarDAOWrite, CarDAORead {
     public List<Car> findByAll() {
 
         try {
-
-
-            connection = DriverManager.getConnection(url, username, password);
-            System.out.println(connection + " connected");
-            statement = connection.createStatement();
-
             query = "select * from car";
             ResultSet resultSet = statement.executeQuery(query);
 
