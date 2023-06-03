@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b2f10cf-2ff3-4dc4-95f1-323106402558" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="5b2f10cf-2ff3-4dc4-95f1-323106402558" name="Changes" comment="constructor base connection creation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/repository/CarDBDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/repository/CarDBDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/service/CarService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/service/CarService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,8 +60,16 @@
       <option name="presentableId" value="Default" />
       <updated>1685785919503</updated>
       <workItem from="1685785924318" duration="3771000" />
-      <workItem from="1685793840639" duration="6234000" />
+      <workItem from="1685793840639" duration="8388000" />
     </task>
+    <task id="LOCAL-00001" summary="constructor base connection creation">
+      <created>1685820862631</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1685820862631</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -78,6 +85,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="constructor base connection creation" />
+    <option name="LAST_COMMIT_MESSAGE" value="constructor base connection creation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
