@@ -1,7 +1,6 @@
 package model.service;
 
 import model.entity.Car;
-import model.repository.CarDAO;
 import model.repository.CarDAORead;
 import model.repository.CarDAOWrite;
 import model.repository.CarDBDAO;
@@ -46,7 +45,7 @@ public class CarService implements CarServiceRead, CarServiceWrite {
     }
 
     @Override
-    public Car findById(long id) {
+    public Car findById(String id) {
         Car byId;
         try {
             carDAORead = new CarDBDAO();

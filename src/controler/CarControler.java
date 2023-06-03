@@ -23,7 +23,7 @@ public class CarControler {
         carServiceWrite.update(car);
     }
 
-    public Car findById(long id) {
+    public Car findById(String id) {
         return carServiceRead.findById(id);
     }
 
