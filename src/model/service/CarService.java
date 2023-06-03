@@ -13,31 +13,39 @@ public class CarService implements CarServiceRead, CarServiceWrite {
     CarDAORead carDAORead;
     @Override
     public void save(Car car) {
+
         carDAOWrite = new CarDBDAO();
         carDAOWrite.save(car);
+        carDAOWrite.close();
     }
 
     @Override
     public void delete(long id) {
         carDAOWrite = new CarDBDAO();
         carDAOWrite.delete(id);
+        carDAOWrite.close();
     }
 
     @Override
     public void update(Car car) {
         carDAOWrite = new CarDBDAO();
         carDAOWrite.update(car);
+        carDAOWrite.close();
     }
 
     @Override
     public Car findById(long id) {
         carDAORead = new CarDBDAO();
-        return carDAORead.findById(id);
+        Car byId = carDAORead.findById(id);
+        carDAORead.close();
+        return byId;
     }
 
     @Override
     public List<Car> findByAll() {
         carDAORead = new CarDBDAO();
-        return carDAORead.findByAll();
+        List<Car> byAll = carDAORead.findByAll();
+        carDAORead.close();
+        return byAll;
     }
 }

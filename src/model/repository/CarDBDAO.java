@@ -15,7 +15,7 @@ public class CarDBDAO implements CarDAOWrite, CarDAORead{
     private Connection connection;
     private Statement statement;
 
-    public CarDBDAO() {
+    public CarDBDAO() throws Exception {
         try {
             connection = DriverManager.getConnection(url, username, password);
             System.out.println(connection + " connected");
@@ -26,7 +26,7 @@ public class CarDBDAO implements CarDAOWrite, CarDAORead{
     }
 
     @Override
-    public void save(Car car) {
+    public void save(Car car) throws Exception{
         try {
             query = "insert into Car values (" + car.getId() + "," + car.getModel() + ")";
             statement.executeUpdate(query);
@@ -36,7 +36,7 @@ public class CarDBDAO implements CarDAOWrite, CarDAORead{
     }
 
     @Override
-    public void delete(long id) {
+    public void delete(long id) throws Exception {
         try {
             query = "delete from car where id = " + id;
             statement.executeUpdate(query);
@@ -46,8 +46,7 @@ public class CarDBDAO implements CarDAOWrite, CarDAORead{
     }
 
     @Override
-    public void update(Car car) {
-        try {
+    public void update(Car car) throws Exception{
             connection = DriverManager.getConnection(url, username, password);
             System.out.println(connection + " connected");
             statement = connection.createStatement();
@@ -58,16 +57,11 @@ public class CarDBDAO implements CarDAOWrite, CarDAORead{
 
             query = "update car set model = " + car.getModel() + " where id = "+ car.getId();
             statement.executeUpdate(query);
-
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
-        }
     }
 
     @Override
-    public Car findById(long id) {
+    public Car findById(long id) throws Exception {
         Car car = new Car();
-        try {
             query = "select * from car ";
             ResultSet resultSet = statement.executeQuery(query);
 
@@ -78,16 +72,12 @@ public class CarDBDAO implements CarDAOWrite, CarDAORead{
                 }
             }
 
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
-        }
         return car;
     }
 
     @Override
-    public List<Car> findByAll() {
+    public List<Car> findByAll() throws Exception {
 
-        try {
             query = "select * from car";
             ResultSet resultSet = statement.executeQuery(query);
 
@@ -96,21 +86,16 @@ public class CarDBDAO implements CarDAOWrite, CarDAORead{
 //                System.out.println("model: " + resultSet.getString("model"));
 //            }
 
-        }catch (SQLException e) {
-            System.out.println(e.getMessage());
-        }
+
 
         return null;
     }
 
-    public void close(){
-        try {
+    public void close() throws Exception{
+
             statement.close();
             connection.close();
             System.out.println("disconnected");
-        } catch (SQLException e) {
-        }
-
     }
 
 

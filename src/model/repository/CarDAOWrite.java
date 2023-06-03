@@ -8,4 +8,5 @@ public interface CarDAOWrite {
     void delete(long id);
 
     void update(Car car);
+    void close();
 }
