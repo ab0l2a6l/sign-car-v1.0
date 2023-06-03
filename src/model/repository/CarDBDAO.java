@@ -5,7 +5,7 @@ import model.entity.Car;
 import java.sql.*;
 import java.util.List;
 
-public class CarDBDAO implements CarDAOWrite, CarDAORead {
+public class CarDBDAO implements CarDAOWrite, CarDAORead{
     final String url = "jdbc:mysql://localhost:3306/firstdb";
     final String username = "root";
     final String password = "Am311865186";
@@ -30,10 +30,6 @@ public class CarDBDAO implements CarDAOWrite, CarDAORead {
         try {
             query = "insert into Car values (" + car.getId() + "," + car.getModel() + ")";
             statement.executeUpdate(query);
-
-            statement.close();
-            connection.close();
-            System.out.println("disconnected");
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
@@ -44,10 +40,6 @@ public class CarDBDAO implements CarDAOWrite, CarDAORead {
         try {
             query = "delete from car where id = " + id;
             statement.executeUpdate(query);
-
-            statement.close();
-            connection.close();
-            System.out.println("disconnected");
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
@@ -67,10 +59,6 @@ public class CarDBDAO implements CarDAOWrite, CarDAORead {
             query = "update car set model = " + car.getModel() + " where id = "+ car.getId();
             statement.executeUpdate(query);
 
-
-            statement.close();
-            connection.close();
-            System.out.println("disconnected");
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
@@ -89,9 +77,6 @@ public class CarDBDAO implements CarDAOWrite, CarDAORead {
                     car.setModel(resultSet.getString("model"));
                 }
             }
-            statement.close();
-            connection.close();
-            System.out.println("disconnected");
 
         } catch (SQLException e) {
             System.out.println(e.getMessage());
@@ -111,15 +96,22 @@ public class CarDBDAO implements CarDAOWrite, CarDAORead {
 //                System.out.println("model: " + resultSet.getString("model"));
 //            }
 
-
-            statement.close();
-            connection.close();
-            System.out.println("disconnected");
-
         }catch (SQLException e) {
             System.out.println(e.getMessage());
         }
 
         return null;
     }
+
+    public void close(){
+        try {
+            statement.close();
+            connection.close();
+            System.out.println("disconnected");
+        } catch (SQLException e) {
+        }
+
+    }
+
+
 }
