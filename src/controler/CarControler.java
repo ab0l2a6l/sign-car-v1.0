@@ -8,8 +8,8 @@ import model.service.CarServiceWrite;
 import java.util.List;
 
 public class CarControler {
-    CarServiceWrite carServiceWrite = new CarService();
-    CarServiceRead carServiceRead = new CarService();
+    private CarServiceWrite carServiceWrite = new CarService();
+    private CarServiceRead carServiceRead = new CarService();
 
     public void save(Car car) {
         carServiceWrite.save(car);

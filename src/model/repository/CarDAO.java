@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CarDAO implements CarDAORead, CarDAOWrite {
-    static List<Car> carList = new ArrayList<>();
+    private static List<Car> carList = new ArrayList<>();
 
     @Override
     public void save(Car car) {

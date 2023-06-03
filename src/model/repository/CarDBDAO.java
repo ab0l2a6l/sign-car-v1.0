@@ -6,9 +6,9 @@ import java.sql.*;
 import java.util.List;
 
 public class CarDBDAO implements CarDAOWrite, CarDAORead{
-    final String url = "jdbc:mysql://localhost:3306/firstdb";
-    final String username = "root";
-    final String password = "Am311865186";
+    private final String url = "jdbc:mysql://localhost:3306/firstdb";
+    private final String username = "root";
+    private final String password = "Am311865186";
     private String query;
 
 
