@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface CarServiceRead {
 
-    Car findById(long id);
+    Car findById(String id);
 
     List<Car> findByAll();
 }

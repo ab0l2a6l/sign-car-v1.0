@@ -31,7 +31,7 @@ public class Main {
 
                 case 2 -> {
                     System.out.print("inset id for search: ");
-                    Car car = carControler.findById(input.nextLong());
+                    Car car = carControler.findById(input.next());
                     System.out.println(car);
 
                 }

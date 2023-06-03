@@ -60,17 +60,13 @@ public class CarDBDAO implements CarDAOWrite, CarDAORead{
     }
 
     @Override
-    public Car findById(long id) throws Exception {
+    public Car findById(String id) throws Exception {
         Car car = new Car();
-            query = "select * from car ";
+            query = "select * from car where id=" + id;
             ResultSet resultSet = statement.executeQuery(query);
-
-            while (resultSet.next()) {
-                if (id == resultSet.getInt("id")) {
                     car.setId(resultSet.getInt("id"));
                     car.setModel(resultSet.getString("model"));
-                }
-            }
+
 
         return car;
     }
