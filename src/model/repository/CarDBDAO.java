@@ -28,10 +28,11 @@ public class CarDBDAO implements CarDAOWrite, CarDAORead{
     @Override
     public void save(Car car) throws Exception{
         try {
-            query = "insert into Car values (" + car.getId() + "," + car.getModel() + ")";
-            statement.executeUpdate(query);
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
+            query = "insert into car values (" + car.getId() + ",\"" + car.getModel() + "\")";
+             statement.executeUpdate(query);
+            System.out.println(query);
+        }  catch (SQLException e) {
+            throw new RuntimeException(e);
         }
     }
 

@@ -30,6 +30,11 @@ public class CarDAO implements CarDAORead, CarDAOWrite {
     }
 
     @Override
+    public void close() throws Exception {
+
+    }
+
+    @Override
     public void delete(long id) {
         carList.remove(findById(id));
     }
