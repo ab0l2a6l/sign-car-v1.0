@@ -14,38 +14,60 @@ public class CarService implements CarServiceRead, CarServiceWrite {
     @Override
     public void save(Car car) {
 
-        carDAOWrite = new CarDBDAO();
-        carDAOWrite.save(car);
-        carDAOWrite.close();
+        try {
+            carDAOWrite = new CarDBDAO();
+            carDAOWrite.save(car);
+            carDAOWrite.close();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Override
     public void delete(long id) {
-        carDAOWrite = new CarDBDAO();
-        carDAOWrite.delete(id);
-        carDAOWrite.close();
+        try {
+            carDAOWrite = new CarDBDAO();
+            carDAOWrite.delete(id);
+            carDAOWrite.close();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Override
     public void update(Car car) {
-        carDAOWrite = new CarDBDAO();
-        carDAOWrite.update(car);
-        carDAOWrite.close();
+        try {
+            carDAOWrite = new CarDBDAO();
+            carDAOWrite.update(car);
+            carDAOWrite.close();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Override
     public Car findById(long id) {
-        carDAORead = new CarDBDAO();
-        Car byId = carDAORead.findById(id);
-        carDAORead.close();
+        Car byId;
+        try {
+            carDAORead = new CarDBDAO();
+            byId = carDAORead.findById(id);
+            carDAORead.close();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
         return byId;
     }
 
     @Override
     public List<Car> findByAll() {
-        carDAORead = new CarDBDAO();
-        List<Car> byAll = carDAORead.findByAll();
-        carDAORead.close();
+        List<Car> byAll;
+        try {
+            carDAORead = new CarDBDAO();
+            byAll = carDAORead.findByAll();
+            carDAORead.close();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
         return byAll;
     }
 }

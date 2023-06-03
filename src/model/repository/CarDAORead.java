@@ -5,8 +5,8 @@ import model.entity.Car;
 import java.util.List;
 
 public interface CarDAORead {
-    Car findById(long id);
-    List<Car>findByAll();
+    Car findById(long id) throws Exception;
+    List<Car>findByAll() throws Exception;
 
-    void close();
+    void close() throws Exception;
 }
