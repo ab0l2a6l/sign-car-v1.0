@@ -4,7 +4,6 @@ import common.StaticScanner;
 import controler.CarControler;
 import model.entity.Car;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -55,7 +54,7 @@ public class Main {
                 }
 
                 case 5 -> {
-                    List<Car> carList = new ArrayList<>();
+                    List<Car> carList  ;
                     carList = carControler.findByAll();
                     carList.forEach(item ->
                             {
