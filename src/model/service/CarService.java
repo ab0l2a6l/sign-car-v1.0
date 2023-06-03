@@ -9,8 +9,8 @@ import model.repository.CarDBDAO;
 import java.util.List;
 
 public class CarService implements CarServiceRead, CarServiceWrite {
-    CarDAOWrite carDAOWrite;
-    CarDAORead carDAORead;
+    private CarDAOWrite carDAOWrite;
+    private CarDAORead carDAORead;
     @Override
     public void save(Car car) {
 
