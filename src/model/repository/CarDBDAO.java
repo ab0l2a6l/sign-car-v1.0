@@ -3,6 +3,7 @@ package model.repository;
 import model.entity.Car;
 
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.List;
 
 public class CarDBDAO implements CarDAOWrite, CarDAORead{
@@ -78,17 +79,22 @@ public class CarDBDAO implements CarDAOWrite, CarDAORead{
     @Override
     public List<Car> findByAll() throws Exception {
 
+        try {
+            List<Car> carList = new ArrayList<>();
             query = "select * from car";
             ResultSet resultSet = statement.executeQuery(query);
 
-//            while (resultSet.next()) {
-//                System.out.println("id: " + resultSet.getInt("id"));
-//                System.out.println("model: " + resultSet.getString("model"));
-//            }
+            while (resultSet.next()) {
+                Car car = new Car();
+                car.setId(resultSet.getInt("id"));
+                car.setModel(resultSet.getString("model"));
+                carList.add(car);
+            }
+            return carList;
 
-
-
-        return null;
+        }catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public void close() throws Exception{
