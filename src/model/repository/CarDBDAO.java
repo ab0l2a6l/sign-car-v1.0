@@ -57,7 +57,7 @@ public class CarDBDAO implements CarDAOWrite, CarDAORead{
             // set model = 'pride'
             // where id = 222
 
-            query = "update car set model = " + car.getModel() + " where id = "+ car.getId();
+            query = "update car set model = \"" + car.getModel() + "\" where id = "+ car.getId();
             statement.executeUpdate(query);
     }
 
