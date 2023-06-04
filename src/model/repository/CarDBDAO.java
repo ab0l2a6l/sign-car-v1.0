@@ -61,11 +61,14 @@ public class CarDBDAO implements CarDAOWrite, CarDAORead {
     public Car findById(String id) throws Exception {
         try {
             Car car = new Car();
-            query = "select * from car where id= " + id;
+            query = "select * from car ";
             ResultSet resultSet = statement.executeQuery(query);
-            car.setId(resultSet.getInt("id")); // inja exception part mikone
-            car.setModel(resultSet.getString("model"));
-
+            while (resultSet.next()) {
+                if ( id.equals(String.valueOf(resultSet.getInt("id")))) {
+                    car.setId(resultSet.getInt("id"));
+                    car.setModel(resultSet.getString("model"));
+                }
+            }
             return car;
         } catch (SQLException e) {
             throw new RuntimeException(e);
