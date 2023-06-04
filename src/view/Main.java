@@ -57,9 +57,7 @@ public class Main {
                     List<Car> carList;
                     carList = carControler.findByAll();
                     System.out.println("id\tmodel");
-                    carList.forEach(item -> {
-                                System.out.println(item.getId()+"\t" + item.getModel());
-                            }
+                    carList.forEach(item -> System.out.println(item.getId()+"\t" + item.getModel())
                     );
                 }
 
