@@ -48,7 +48,7 @@ public class CarService implements CarServiceRead, CarServiceWrite {
     public Car findById(String id) {
 
         try {
-            Car byId = new Car();
+            Car byId;
             carDAORead = new CarDBDAO();
             byId = carDAORead.findById(id);
             carDAORead.close();
