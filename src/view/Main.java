@@ -31,7 +31,7 @@ public class Main {
 
                 case 2 -> {
                     System.out.print("inset id for search: ");
-                    Car car = carControler.findById(input.next());
+                    Car car = carControler.findById(input.nextLine());
                     System.out.println(car);
 
                 }
@@ -54,10 +54,9 @@ public class Main {
                 }
 
                 case 5 -> {
-                    List<Car> carList  ;
+                    List<Car> carList;
                     carList = carControler.findByAll();
-                    carList.forEach(item ->
-                            {
+                    carList.forEach(item -> {
                                 System.out.println("id: " + item.getId());
                                 System.out.println("model: " + item.getModel());
                             }
@@ -67,12 +66,8 @@ public class Main {
                 case 6 -> {
                     return;
                 }
-
             }
-
         }
-
-
     }
 
     private static void menu() {

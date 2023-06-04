@@ -46,15 +46,17 @@ public class CarService implements CarServiceRead, CarServiceWrite {
 
     @Override
     public Car findById(String id) {
-        Car byId;
+
         try {
+            Car byId = new Car();
             carDAORead = new CarDBDAO();
             byId = carDAORead.findById(id);
             carDAORead.close();
+            return byId;
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
-        return byId;
+
     }
 
     @Override

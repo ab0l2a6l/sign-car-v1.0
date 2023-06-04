@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b2f10cf-2ff3-4dc4-95f1-323106402558" name="Changes" comment="better solution">
+    <list default="true" id="5b2f10cf-2ff3-4dc4-95f1-323106402558" name="Changes" comment="edit insert">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/repository/CarDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/repository/CarDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/repository/CarDBDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/repository/CarDBDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/service/CarService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/service/CarService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,42 +37,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="view.Main" />
-      <module name="signup-car-v1.0" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="view.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Main" />
-      </list>
-    </recent_temporary>
-  </component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -81,7 +62,9 @@
       <option name="presentableId" value="Default" />
       <updated>1685785919503</updated>
       <workItem from="1685785924318" duration="3771000" />
-      <workItem from="1685793840639" duration="9123000" />
+      <workItem from="1685793840639" duration="8388000" />
+      <workItem from="1685866001640" duration="335000" />
+      <workItem from="1685866385312" duration="2161000" />
     </task>
     <task id="LOCAL-00001" summary="constructor base connection creation">
       <created>1685820862631</created>
@@ -90,21 +73,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685820862631</updated>
     </task>
-    <task id="LOCAL-00002" summary="fixed bug 4 repeat">
-      <created>1685823905794</created>
+    <task id="LOCAL-00002" summary="edit insert">
+      <created>1685823106082</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1685823905794</updated>
+      <updated>1685823106083</updated>
     </task>
-    <task id="LOCAL-00003" summary="better solution">
-      <created>1685824013715</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1685824013715</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -115,7 +91,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -123,17 +111,16 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="constructor base connection creation" />
-    <MESSAGE value="fixed bug 4 repeat" />
-    <MESSAGE value="better solution" />
-    <option name="LAST_COMMIT_MESSAGE" value="better solution" />
+    <MESSAGE value="edit insert" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit insert" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/view/Main.java</url>
-          <line>15</line>
-          <option name="timeStamp" value="1" />
+          <line>33</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
